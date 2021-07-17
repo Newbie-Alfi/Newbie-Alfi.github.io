@@ -1,0 +1,69 @@
+%f-e-sb { //шаблон выравнивания
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav{
+
+    font-family: Bodoni MT;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    color: white;
+    @extend %f-e-sb;
+    padding: 0;
+    // background-color: red;
+    .nav__list {
+        margin-left:1.66vw;
+        font-size: 1.58vw;
+        width: 25vw;
+        @extend %f-e-sb;
+        white-space: nowrap;
+    }
+
+    & a{
+        color: white;
+        font-weight:lighter;
+    }
+
+    .nav__logo {
+        width: 8.85vw;
+        height:8.88vw;
+        transform: translate(0,10%);
+        align-self:start;
+    }
+}
+
+.nav-search {
+    display: flex;
+    font-family: "Bodoni MT", regular;
+    font-size: 1.58vw;
+    text-align: center;
+    gap: 5%;
+    // width: 25vw;
+    height: 50%;
+
+    .nav-search__text{
+        color: white;
+        border: 1px white solid;
+        text-align: center;
+        background: none;
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+.nav-search__btn{
+    margin-right:1.66vw;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    background: none;
+    border: 0px;
+    min-width: 20px;
+    .nav-search__icon{
+        min-width: 20px;
+    }
+}

@@ -1,0 +1,22 @@
+@font-face{
+font-family: "Comfortaa-Medium";
+src: url(/fonts/Comfortaa-Medium.ttf) format("truetype");
+font-style:normal;
+font-weight:normal;
+}
+@font-face{
+    font-family: "Comfortaa-Semibold";
+    src: url(/fonts/Comfortaa-SemiBold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Comfortaa";
+    src: url(/fonts/Comfortaa-VariableFont_wght.ttf) format("truetype");
+}
+ @font-face {
+    font-family: "Bodoni MT regular";
+    src: url(/fonts/BOD_R.TTF);
+    font-style: normal;
+    font-weight: normal;
+} 

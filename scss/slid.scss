@@ -1,0 +1,69 @@
+.categories{
+
+    /* fighting the sliders */
+    overflow-x: hidden;
+    /* fighting the sliders */
+
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+
+    .categories__row {
+        margin: 2% auto;
+        width: 90%;
+        display: grid;
+        gap: 1%;
+        grid-template-columns: repeat(3,30vw);
+        grid-template-rows: repeat(auto-fit, 60vh);
+
+        .categories__product {
+            font-family: "Comfortaa";
+            height: 100%;
+            background-color:#1a1a1a;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            & .dimming{
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 20%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            &:hover .dimming{
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            .dimming:hover{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            & img{
+                opacity: 1;
+                object-fit: cover;
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .categories__name {
+            opacity: 1;
+            font-weight:500;
+            width: 60%;
+            font-size: 7vmin;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+            z-index: 4;
+            transition: 0.4s;
+        }
+    }
+}

@@ -1,0 +1,560 @@
+@charset "UTF-8";
+.categories {
+  /* fighting the sliders */
+  overflow-x: hidden;
+  /* fighting the sliders */
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.categories .categories__row {
+  margin: 2% auto;
+  width: 90%;
+  display: grid;
+  gap: 1%;
+  grid-template-columns: repeat(3, 30vw);
+  grid-template-rows: repeat(auto-fit, 60vh);
+}
+.categories .categories__row .categories__product {
+  font-family: "Comfortaa";
+  height: 100%;
+  background-color: #1a1a1a;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.categories .categories__row .categories__product .dimming {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.categories .categories__row .categories__product:hover .dimming {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.categories .categories__row .categories__product .dimming:hover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.categories .categories__row .categories__product img {
+  opacity: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+}
+.categories .categories__row .categories__name {
+  opacity: 1;
+  font-weight: 500;
+  width: 60%;
+  font-size: 7vmin;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  z-index: 4;
+  transition: 0.4s;
+}
+
+.nav .nav__list, .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  font-family: Bodoni MT;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  color: white;
+  padding: 0;
+}
+.nav .nav__list {
+  margin-left: 1.66vw;
+  font-size: 1.58vw;
+  width: 25vw;
+  white-space: nowrap;
+}
+.nav a {
+  color: white;
+  font-weight: lighter;
+}
+.nav .nav__logo {
+  width: 8.85vw;
+  height: 8.88vw;
+  transform: translate(0, 10%);
+  align-self: start;
+}
+
+.nav-search {
+  display: flex;
+  font-family: "Bodoni MT", regular;
+  font-size: 1.58vw;
+  text-align: center;
+  gap: 5%;
+  height: 50%;
+}
+.nav-search .nav-search__text {
+  color: white;
+  border: 1px white solid;
+  text-align: center;
+  background: none;
+}
+.nav-search .nav-search__text::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.nav-search .nav-search__text:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.nav-search .nav-search__text::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-search__btn {
+  margin-right: 1.66vw;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  background: none;
+  border: 0px;
+  min-width: 20px;
+}
+.nav-search__btn .nav-search__icon {
+  min-width: 20px;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.nav, .nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-screen__body {
+  color: white;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upper-headblock {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen__title {
+  font-family: "Bodoni MT regular";
+  font-size: 5vw;
+  /* margin: 0px 0px 20px 0px; */
+  text-transform: uppercase;
+}
+
+.full-screen__text {
+  font-family: "Trebuchet MS";
+  width: 60%;
+  text-align: center;
+  font-size: 1.875vw;
+}
+
+.advantages {
+  margin-top: 5%;
+  width: 66%;
+  display: flex;
+  text-align: center;
+}
+
+.advantage__title {
+  font-family: "Bodoni MT";
+  font-size: 2.5vw;
+}
+
+.advantage__text {
+  font-family: "Trebuchet MS";
+  font-size: 1.56vw;
+}
+
+/* video, */
+.full-screen_video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blue-line {
+  background-color: #2ea6af;
+}
+
+.line {
+  transition: 0.6s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  min-width: 100vw;
+  height: 25%;
+}
+
+.product:hover .line {
+  background-color: #383838;
+  height: 85%;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  padding-bottom: 100px;
+  font-size: 2vmin;
+  margin: 0 auto;
+  min-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-head {
+  margin-top: 5%;
+  font-size: 1vmin;
+  text-align: center;
+  width: 50%;
+}
+
+.head-small__text {
+  margin: 0;
+}
+
+.head-big__text {
+  margin: 0;
+  font-size: 6.55em;
+}
+
+.head-middle-text {
+  margin: 0;
+  font-size: 2.56em;
+}
+
+.button {
+  border: 0;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  font-weight: 100;
+  background-color: #1a1a1a;
+  color: white;
+  z-index: 3;
+  transition: 0.3s;
+  width: 40%;
+  padding: 3% 0;
+}
+
+.button-in_head a {
+  color: #fff;
+  position: inherit;
+}
+
+.button-in_head {
+  width: 30%;
+  padding: 1% 0;
+  transform: translateX(-50%);
+  margin-top: 1%;
+}
+
+.upper {
+  top: 1%;
+  left: -1%;
+}
+
+.lower {
+  bottom: 1%;
+  right: -1%;
+}
+
+.dimming {
+  opacity: 1;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.inventory {
+  margin-top: 5%;
+}
+
+.inventory__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inventory__title {
+  font-size: 2.56em;
+}
+
+.inventory__exclusive {
+  margin: 8% 0px;
+  padding: 1% 2%;
+}
+
+.inventory__row {
+  margin-top: 20%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1%;
+}
+
+.inventory__product {
+  position: relative;
+}
+.inventory__product:hover .small-text, .inventory__product:hover .inventory-dimming, .inventory__product:hover .inventory__source {
+  opacity: 1;
+}
+.inventory__product:hover .inventory__price {
+  transform: translateY(200%);
+}
+.inventory__product:hover .inventory__name {
+  transform: translateY(-200%);
+}
+
+.inventory-dimming {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.inventory__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+.inventory__source {
+  color: white;
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: 0;
+  font-size: 1.4vw;
+  text-align: center;
+  transform: translate(0, -50%);
+  width: 100%;
+  transition: 0.9s;
+}
+
+.inventory__name {
+  top: 10%;
+  transform: translate(0, -50%);
+}
+
+.inventory__price {
+  bottom: 10%;
+  transform: translate(0, 50%);
+}
+
+.small-text {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  transition: 0.1s;
+  opacity: 0;
+  /* font-size: 0.5em; */
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  color: #4169E1;
+}
+
+.footer__row {
+  padding: 3% 0px;
+  display: flex;
+}
+
+.footer__column {
+  width: 20%;
+}
+
+.footer__title {
+  font-size: 2vmin;
+  color: #a3a3a3;
+}
+
+.footer__list {
+  padding: 0;
+  color: white;
+}
+
+.footer__text-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer__text-list img {
+  width: 2vmin;
+}
+
+.footer__text-list a {
+  margin: 0;
+  font-size: 1.5vmin;
+  margin-left: 5%;
+}
+
+.footer__logo {
+  width: 40%;
+}
+
+.footer__row:first-child {
+  margin-left: 1%;
+}
+
+.map {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 300px;
+}
+.map:hover .map-dimming {
+  background-color: rgba(0, 0, 0, 0.075);
+  height: 0;
+}
+
+.map-object {
+  width: 100%;
+  height: 100%;
+}
+
+.map-dimming {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+}/*# sourceMappingURL=index.css.map */

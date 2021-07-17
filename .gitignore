@@ -1,0 +1,8 @@
+
+/.vscode copy
+css/*.css*
+
+#игнорируются все css файлы их папки css, но не index.css и не index.css.map
+!index.css
+!index.css.map
+*.txt
